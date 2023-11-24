@@ -7,7 +7,7 @@ const generateToken = (payload) => {
   console.log("Input Payload:", payload);
   
   const token = jwt.sign(payload, secretKey, {
-    expiresIn: '1h', // Token expiration time
+    expiresIn: '24h', // Token expiration time
   });
 
   console.log("Generated Token:", token);

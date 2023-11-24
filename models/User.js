@@ -28,18 +28,11 @@ const userSchema = new mongoose.Schema({
       ref: "Post",
     },
   ],
-  totalLikes: {
-    type: Number,
-    default: 0,
-  },
   totalViews: {
     type: Number,
     default: 0,
   },
 });
-
-// Hash password before saving to database
-
 
 const User = mongoose.model("User", userSchema);
 

@@ -1,3 +1,4 @@
+// models/Post.js
 const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema({
@@ -11,13 +12,15 @@ const postSchema = new mongoose.Schema({
   },
   author: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User", // Reference to the User model
+    ref: "User",
     required: true,
   },
-  likes: {
-    type: Number,
-    default: 0,
-  },
+  likes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+  ],
   views: {
     type: Number,
     default: 0,

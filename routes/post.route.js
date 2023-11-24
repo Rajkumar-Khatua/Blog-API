@@ -6,6 +6,7 @@ const {
   getPostById,
   updatePostById,
   deletePostById,
+  toggleLikePostById,
 } = require("../controllers/postControllers.js");
 
 // Create a new post
@@ -19,6 +20,8 @@ router.get("/:postId", getPostById);
 
 // Update a post by ID
 router.put("/:postId", updatePostById);
+// Like a post by ID
+router.put("/:postId/like", toggleLikePostById);
 
 // Delete a post by ID
 router.delete("/:postId", deletePostById);
