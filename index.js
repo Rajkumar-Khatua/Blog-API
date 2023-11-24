@@ -18,10 +18,12 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors({
-  origin:'http://localhost:3000',
-  credentials:true
-}));
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 
 // Apply the authMiddleware to protect routes
