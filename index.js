@@ -17,6 +17,7 @@ const authRoutes = require("./routes/auth.route.js");
 const userRoutes = require("./routes/user.route.js");
 const postRoutes = require("./routes/post.route.js");
 
+
 // Create Express app
 const app = express();
 
