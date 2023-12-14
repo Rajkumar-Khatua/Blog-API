@@ -9,9 +9,14 @@ const authMiddleware = require("./middleware/authMiddleware.js");
 dotenv.config();
 
 // Import routes
-const authRoutes = require("../api/routes/auth.route.js");
-const userRoutes = require("../api/routes/user.route.js");
-const postRoutes = require("../api/routes/post.route.js");
+// const authRoutes = require("../api/routes/auth.route.js");
+// const userRoutes = require("../api/routes/user.route.js");
+// const postRoutes = require("../api/routes/post.route.js");
+
+const authRoutes = require("./routes/auth.route.js");
+const userRoutes = require("./routes/user.route.js");
+const postRoutes = require("./routes/post.route.js");
+
 
 // Create Express app
 const app = express();
